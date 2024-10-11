@@ -66,8 +66,16 @@ SELECT nome, descricao, pedidos.id FROM produtos
 INNER JOIN pedidos ON produtos.id = pedidos.idProduto;
 
 SELECT *  FROM visualizar_produtos_pedidos;
-SELECT * FROM clientes;
-SELECT * FROM produtos;
 
+-- Visulizar o cliente o pedido e o produto
+-- INNER JOIN => INNER JOIN
+-- Criar uma VIEW
 
+CREATE VIEW visualizar_comprador_pedido AS
+SELECT clientes.nome AS nomeCliente, produtos.nome AS NomeProduto, pedidos.id AS idPedido
+FROM clientes
+INNER JOIN pedidos ON pedidos.idCliente = clientes.id
+INNER JOIN produtos ON produtos.id = pedidos.idProduto;
+
+SELECT * FROM visualizar_comprador_pedido;
 
