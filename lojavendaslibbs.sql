@@ -62,3 +62,8 @@ INSERT INTO funcionarios (nome, cpf, ncarteira, salario) VALUES
 ('Tiquinho', '12345678910', '347679453', 5000),
 ('José', '12345678910', '4564654', 6000),
 ('Soarez', '12345678910', '347679453', 7000);
+
+INSERT INTO pedidos (idCliente, idProduto, idFuncionarios, idFornecedor) VALUES
+(3, 2, 2, 1), (2, 1, 3, 2), (1, 3, 1, 3);
+
+-- AS
